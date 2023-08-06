@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\solution}{\noindent \textbf{Solution: }}
 \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
@@ -21,19 +22,21 @@ This is Problem-1.1 from Exercise 7.3
 \solution \\
 Given Data:
 \begin{align}
-x_1 = 2 ,y_1 = 3\\
-x_2 = -1,y_2 = 0\\
-x_3 =2,y_3 = -4\\
+A = \myvec{2\\3}\\
+B = \myvec{-1\\0}\\
+C = \myvec{2\\-4}\\
 \end{align}
-By using the formula:
 \begin{align}
-\frac{1}{2}[x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)]\\
-\frac{1}{2}[2(0-(-4))+(-1(-4-3)+2(3-0)]\\
-\frac{1}{2}[2(4)+(-1(-7)+2(3)]\\
-\frac{1}{2}[8+7+6]\\
-\frac{1}{2}[21]\\
+\vec{AB} = \myvec{-3\\-3}\\
+\vec{BC} = \myvec{3\\-4}\\
+\end{align}
+AREA OF THE TRIANGLE:
+\begin{align}
+\frac{1}{2}|\myvec{AB}\times \myvec{BC}|\\
+\frac{1}{2}\mydet{-3 & 3 \\ -3 & -4}\\
+\frac{1}{2}|12 + 9|\\
+\frac{1}{2}|21|\\
 \frac{21}{2} sq.units
 \end{align}
-Area of the triangle = 10.5 sq.units
 \end{enumerate}
 \end{document}
