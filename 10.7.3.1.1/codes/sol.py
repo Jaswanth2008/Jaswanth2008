@@ -1,14 +1,12 @@
-# import complex math module  
-import cmath
-a = 2 
-b = -1
-c = 2
-d = 3 
-e = 0 
-f = -4
+import numpy as np 
+A = np.array([2,3])
+B = np.array([-1,0])
+C = np.array([2,-4])
 
+AB = B - A
+BC = C - B
 
-#calculate the area of the triangle
-sol1 = 0.5*((a*e-a*f)+(b*f-b*d)+(c*d-c*e))
+Area = 0.5*np.cross(AB,BC)
 
-print(sol1)
+print(Area)
+
